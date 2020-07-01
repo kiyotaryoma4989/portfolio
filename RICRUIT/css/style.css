@@ -1,0 +1,267 @@
+@charset"utf-8";
+
+/*#9AFF00*/
+/*white*/
+/*#27a120*/
+
+body{
+	height: 700vh;
+	font-family:'ヒラギノ丸ゴ ProN','ヒラギノ角ゴシック','Hiragino Maru Gothic ProN','Hiragino Sans','YuMincho','游明朝体',sans-serif;
+	overflow-x: hidden;
+	background: linear-gradient(-65deg, #bbff54 0%, #1ced8f 100%);
+	color: #4300ab;
+}
+
+section{
+	margin-top: 20vh!important;
+}
+
+.flexbox{
+	display: flex;
+	justify-content: space-between;
+	height: auto;
+	align-items: center;
+	vertical-align: middle;
+	flex-wrap: wrap;
+}
+
+.inner{
+	max-width: 80vw;
+	width:100%;
+	margin: 0 auto; 
+}
+
+#site-top{
+	width: 100%;
+	height: 130vh;
+	background: url(../images/eyecatch.jpg);
+	background-size: cover;
+	position: relative;
+}
+
+#text01{
+	font-size: 5rem;
+	position: absolute;
+	bottom: 20px;
+	z-index: 99;
+	padding-left: 100px;
+	letter-spacing: 20px;
+	font-weight: 800;
+}
+
+#text01::before{
+	content: "";
+	position: absolute;
+	opacity: 0.8;
+	bottom: -20%;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 400px 0 400px 90vw;
+	border-color: transparent transparent transparent #9AFF00;
+	z-index: -1;
+}
+
+#page1 > div{
+	width: 100%;
+	height: 400px;
+	margin: 0;
+	background: #9AFF00;
+}
+
+#page1 div h2{
+	font-size: 3rem;
+	text-align: center;
+	margin-left: 30px;
+}
+
+#page1 .inner > div{
+	width: 100%;
+	height: auto;
+	margin-left: 15%;
+	background: #3AFF24;
+	align-items: flex-start;
+}
+
+#page1 .inner div p{
+	font-size: 1rem;
+	line-height: 3;
+	display: inline-block;
+	margin: 50px 0 0 100px;
+}
+
+#hoge{
+	max-width: 500px;
+	height: auto;
+	display: inline-block;
+	margin: -30px -30px 0 0;
+}
+
+#hoge img{
+	width: 100%;
+}
+
+#page2{
+	position: relative;
+	height: 80vh;
+}
+
+#page2 div{
+	position: relative;
+}
+
+#page2 > .flexbox::before{
+	content: "";
+	position: absolute;
+	opacity: 0.8;
+	top: -80px;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 700px 600px;
+	border-color: transparent transparent transparent #9AFF00;
+	z-index: 1;
+	transform:rotate(70deg);
+}
+
+#page2 div article{
+	width: 30%;
+	transform: skewX(5deg);
+
+}
+
+#page2 div article img{
+	width: 100%;
+}
+
+#page2 div article h3{
+	line-height: 2;
+	font-size: 2rem;
+}
+
+#page2 .flexbox article p{
+	line-height: 2;
+}
+
+.page2-square{
+	width: 85%;
+	height: 600px;
+	background:#a1ff4f;
+	transform: skewX(20deg);
+	position: absolute;
+	top: -500px;
+	left: 8%;
+	z-index: -99;
+}
+
+.page3-photos{
+	width: 40%;
+}
+
+.page3-photos > div{
+	position: relative;
+}
+
+.page3-photos > div div:first-of-type{
+	position: absolute;
+	top: -250px;
+	right: -300px;
+	z-index: 99;
+}
+
+.page3-photos > div div:last-of-type{
+	position: absolute;
+	top: -200px;
+	left: -300px;
+	z-index: 97;
+}
+
+#page3 .flexbox .page3-dream{
+	width: 50%;
+	height: auto;
+	text-align: center;
+	line-height: 2;
+	background-color: #a1ff4f;
+	padding:30px;
+	transform: skewX(20deg);
+}
+
+#page3 .flexbox .page3-dream h2{
+	font-size: 2rem;
+	letter-spacing: 10px;
+	transform: skewX(-20deg);
+}
+
+#page3 .flexbox .page3-dream p{
+	transform: skewX(-20deg);
+}
+
+#page3 .flexbox .page3-photos div{
+	width: 400px;
+}
+
+#page3 .flexbox .page3-photos div img{
+	width: 100%;
+}
+
+#page4{
+	background-color: #a9ff29;
+}
+
+#page4 .inner > div:first-child{
+	padding-bottom: 60px;
+}
+
+#page4 .inner > div h2{
+	font-size: 3rem;
+	text-align: center;
+}
+
+#page4 .inner > div:first-child p{
+	width: 50%;
+	margin: 0 auto;
+}
+
+#page4 .page4-items{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#page4 .page4-items article{
+	width: 40%;
+	padding: 20px;
+	text-align: left;
+}
+
+#page4 .page4-items article i{
+	font-size: 5rem;
+	color: black;
+	display: block;
+
+}
+
+#page5 > div > div > div{
+	width: 500px;
+}
+
+#page5 > div > div > div > img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,186 +1,199 @@
 @charset "UTF-8";
 
-body{
-	scroll-behavior: smooth;
-	background-color: black;
-	margin: 0;
-	padding: 0;
-	color: white;
-	background-image: url("../image/moon.png");
-	background-attachment: fixed;
-	background-size: 40%;
-	background-repeat: no-repeat;
-	background-position: 20% 20%;
-	/*font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','ＭＳ Ｐ明朝','ＭＳ 明朝', 'MS Mincho','MS PMincho','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',serif;*/
-	font-family: 'Sitka Small','Sitka Heading','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Apple Chancery','Gurmukhi MN','Snell Roundhand',sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
-.flex-container{
-	display: flex;
-	max-width: 80vw;
-	width: 100%;
-	margin: 0 auto;
-	align-items: center;
-	height: 100vh;
-	justify-content: space-around;
+body {
+    background-color: black;
+    color: white;
+    background-image: url("../image/bg_moon.png");
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'ＭＳ 明朝', 'MS Mincho', 'MS PMincho', 'ヒラギノ丸ゴ ProN', 'Hiragino Maru Gothic ProN', serif;
+    /*font-family: 'Sitka Small', 'Sitka Heading', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', 'Apple Chancery', 'Gurmukhi MN', 'Snell Roundhand', sans-serif;*/
 }
 
-.title-top{
-	display: block;
-	width: 60%;
-	text-align: center;
-	padding: 100px;
-	margin: auto;
+.flex-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.title-top span{
-	transition: 0.8s;
-	display: inline-block;
-	margin: -10px;
+.inner{
+    max-width: 80vw;
+    width: 100%;
+    margin: 0 auto;
 }
 
-#top,#about,#works{
-	margin-bottom: 20vh;
+#top,
+#about,
+#works {
+    margin-bottom: 10vh;
 }
 
-#name{
-	font-size: 45px;
-	letter-spacing: 15px;
-	line-height: 2;
+#nav {
+    right: 0;
+    position: fixed;
 }
 
-#nav{
-	top: 20%;
-	right: 0;
-	position: fixed;
+#nav ul{
+    flex-direction: column;
+    height: 95vh;
+    justify-content: space-around;
 }
 
-.nav-item{
-	width: 50px;
-	height: 60px;
-	display: block;
-	margin: 60px;
-	opacity: 0.7;
+.nav-item {
+    margin: 10px;
+    width: 80px;
+    height: 60px;
+    display: block;
+    opacity: 0.7;
 }
 
-.nav-item:hover{
-	opacity: 1;
-	transition-duration: 0.5s;
+.nav-item:hover {
+    opacity: 1;
+    transition-duration: 0.5s;
 }
 
-
-.page-title{
-	writing-mode: vertical-lr;
-	letter-spacing: 5px;
-	font-size: 2em;
-	display: block;
-	margin: 60px 0;
-	text-align: center;
-	height: 40vh;
-	width: 100px;
-	position: relative;
+.nav-item span{
+    color: #f00;
 }
 
-.page-title::before{
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 15px;
-	height: 100%;
-	background:gray;
-	z-index: -1;
-	opacity: 0.8;
+.l-name {
+    text-align: center;
+    margin: auto;
 }
 
-.about-photo{
+#name {
+    font-size: 45px;
+    letter-spacing: 15px;
+    line-height: 2;
+}
+
+#name span {
+    transition: 0.8s;
+    display: inline-block;
+}
+
+#name span:last-child{
+    display: block;
+}
+
+.sect-title {
+    color: #f00;
+    writing-mode: vertical-lr;
+    letter-spacing: 5px;
+    font-size: 2em;
+    display: block;
+    margin: 60px 0;
+    text-align: center;
+    height: 40vh;
+    width: 100px;
+    position: relative;
+}
+
+.sect-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    background: #333;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.about-img {
     max-width: 30%;
     width: 100%;
-    height: 450px;
+    height: 400px;
 }
 
-.waypoint-container{
+.about-content{
+
+}
+
+.waypoint-container {
     overflow: hidden;
     position: relative;
 }
 
-.waypoint-container-content{
-	width: 100%;
-	height: auto;
+.waypoint-container-content {
+    width: 100%;
+    height: auto;
     position: absolute;
     opacity: 0;
     transition: 0.8s;
 }
 
-.hoge{
-	position: relative;
-}
-
-.waypoint-container:before{
+.waypoint-container:before {
     background: #333;
     content: '';
     display: block;
     height: 100%;
     position: absolute;
     transform: translateX(-100%);
-    transition:all .8s 0s ease-in-out; 
+    transition: all .8s 0s ease-in-out;
     width: 100%;
-    z-index: 99;  
+    z-index: 99;
 }
 
-.waypoint-container.mv10 img{
-    opacity: 1;
-}
- 
-.waypoint-container.mv10:before{
-    transform: translateX(100%);        
-}
- 
-.waypoint-container.mv10{
+.waypoint-container.mv10 img {
     opacity: 1;
 }
 
+.waypoint-container.mv10:before {
+    transform: translateX(100%);
+}
 
+.waypoint-container.mv10 {
+    opacity: 1;
+}
 
-
-#about-text-box{
-	width: 30vw;
-	text-align: left;
-	line-height: 2;
-	display: inline;
-	transition: .8s;
+#about-text-box {
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+    line-height: 2;
+    display: block;
+    transition: .8s;
 }
 
 .slick {
-  width: 100%;
-  max-width: 60vw;
-  margin:0 auto;
-  transition: 0.8s;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: block;
+    transition: .8s;
 }
 
-.slick-slide{
-	width: 100%;
-	height: 100%;
-	display: block;
-	opacity: 1;
+/*.slick-slide img{
+    width: 100%;
+    height: auto;
 }
-
-.works-title{
-	display: none;
-}
-
-.works-title li{
-	display: none;
+*/
+.slick-slide span {
+    display: block;
+    font-size: 2rem;
+    margin: 30px;
+    color: white;
 }
 
 .slick-dots {
-  margin-top:5px;
-  margin-left: -5px;
-  margin-right: -5px;
-  display:flex;
-  justify-content: center;
-  position: relative;
+    margin-top: 5px;
+    margin-left: -5px;
+    margin-right: -5px;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
+
 .slick-dots li {
     list-style: none;
     display: inline-block;
@@ -188,72 +201,84 @@ body{
     max-height: 56px;
     margin: 5px;
 }
-    
+
 .slick-dots img {
     opacity: 0.5;
     width: 100%;
     height: auto;
 }
 
-#form-layout{
-	width: 70%;
-	margin:0 auto;
+.l-form {
+    width: 70%;
+    margin: 0 auto;
 }
 
-.form-item1{
-	margin: 20px 0;
-	display: flex;
-	transition: .8s;
+.form-item1 {
+    margin: 20px 0;
+    display: flex;
+    transition: .8s;
 }
 
-.form-item2{
-	margin: 20px 0;
-	display: flex;
-	transition: 1.2s;
+.form-item2 {
+    margin: 20px 0;
+    display: flex;
+    transition: 1.2s;
 }
 
-.form-item3{
-	margin: 20px 0;
-	display: flex;
-	transition: 1.6s;
+.form-item3 {
+    margin: 20px 0;
+    display: flex;
+    transition: 1.6s;
 }
 
-.form-item4{
-	transition: 3s;
+.form-item4 {
+    transition: 3s;
 }
 
-label{
-	font-size: 1.3em;
-	text-align: left;
-	width: 200px;
-	line-height: 1;
+label {
+    font-size: 1.3em;
+    text-align: left;
+    width: 200px;
+    line-height: 1;
 }
 
-input{
-	background-color: gray;
+input {
+    background-color: gray;
 }
 
-#send-button{
-	border: none;
-	width: 160px;
-	height: 50px;
-	display: block;
-	margin: 0 0 0 auto;
-	font-size: 2rem;
-	color: white;
-	font-family: 'Sitka Small','Sitka Heading','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Apple Chancery','Gurmukhi MN','Snell Roundhand',sans-serif;
+#send-button {
+    border: none;
+    width: 160px;
+    height: 50px;
+    display: block;
+    margin: 0 0 0 auto;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Sitka Small', 'Sitka Heading', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', 'Apple Chancery', 'Gurmukhi MN', 'Snell Roundhand', sans-serif;
 }
 
 
-.resize-input{
-	width: 100%;
-	height: 40px;
+.resize-input {
+    width: 100%;
+    height: 40px;
 }
 
-textarea{
-	width: 100%;
-	height: 300px;
-	background-color: gray;
+textarea {
+    width: 100%;
+    height: 300px;
+    background-color: gray;
+}
+
+footer{
+    position: relative;
+    height: 20px;
+    width: 100%;
+}
+
+footer small{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
 }
 
 

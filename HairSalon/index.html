@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="KIYOTA RYOMA">
+	<meta name="keywords" content="美容院,ヘアサロン">
+	<meta name="viewport" 
+		content="width=device-width,initial-scale=1">
+	<link rel="shortcut icon" href="images/favicon_32.ico">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.19/themes/redmond/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/inview.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+	<title>HairSaron Poirot|公式サイト</title>
+	<meta name="discription" content="東京都の郊外にある、ヘアサロン「Poirot」の公式Webサイトです。
+	都会の喧騒を離れ、ゆっくりと流れる時間の中で心安らぐひと時を楽むことができるヘアサロンです。">
+</head>
+<body>
+
+	<div id="hoge">
+	<div class="slideshow">
+		<img src="images/eyecatch.jpg">
+		<img src="images/eyecatch2.jpg">
+	</div>
+	<header>
+		<h1><img src="images/LOGO.svg"></h1>
+		<nav>
+			<ul>
+				<a href="#"><li>Home</li></a>
+				<a href="#"><li>Staff</li></a>
+				<a href="#"><li>Menu</li></a>
+				<a href="#"><li>Gallery</li></a>
+				<a href="#"><li>Access</li></a>
+			</ul>
+		</nav>
+	</header>
+	<main>
+			<p>お客様一人ひとりに、似合うヘアデザインをご提案させていただきたいと考えます<br>
+			受けと攻めの技術で洗練させたヘアスタイルの追求<br>
+			そのヘアスタイルに触れた人に、”さまざま”を感じてもらうこと<br>
+			緻密で果断を合わせるカット、そこから繰り広げるヘアーカラー、パーマ<br>
+			スペシャリストによる、すてきなライフスタイルを<br>
+			ご提供する”場”でありたいと思います</p>
+		<article>
+			<img class="left-mv07" src="images/article1.jpg">
+			<p class="right-mv07">開放感いっぱいの大きな窓から見える新緑や<br>
+			インテリアのアンティーク雑貨と<br>
+			かわいらしい植物に囲まれながら<br>
+			待合いスペースに設置したソファにお掛けいただき<br>
+			ゆったりとした空間をおたのしみください。</p>
+		</article>
+		<article>
+			<img class="right-mv07" src="images/article2.jpg">
+			<p class="left-mv07">カット技術では、骨格〜アゴライン〜目の位置など、良い<br>
+			バランスにハサミを入れることで、今までより良い雰囲気<br>
+			に仕上げます。<br>
+			私たちは、お客様のライフスタイルに合わせた、あなたに<br>
+			だけの「 オンリーワン 」スタイルをご提案します。</p>
+		</article>
+		<article>
+			<img class="left-mv07" src="images/article3.jpg">
+			<p class="right-mv07">サロンインテリアは、５０坪の広々とした店内の床や壁、<br>
+			家具に至るまで、長い年月を経たようなヴィンテージライ<br>
+			クなこだわりでいっぱい。そんなアーティスティックな空<br>
+			間に、マンハッタン流ラグジュアリーの雰囲気を醸し出し、<br>
+			毎日来店される多くの女性達が次々と素敵に変身する光景<br>
+			は、まるでビューティファクトリーのようです。</p>
+		</article>
+	</main>
+
+	<footer class="flexbox">
+		<div>
+			<h2>HairSalon Poirot</h2>
+			<p>〒XXX-XXXX 東京都XXXXXXXXX<br>
+			TEL 03-XXXX-XXXX<br>
+			営業時間 平日	11:00-20:00<br>
+			定休日 月曜日</p>
+		</div>
+		<div>
+			<a href="#"><i class="fab fa-twitter-square"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-facebook-square"></i></a>
+			<small>Copyright&copy;2020 HairSalon Poirot All Right Throw away.</small>
+		</div>
+	</footer>
+</div>
+
+	<div class="progress" id="progress">
+  	  	<span class="progress-bar"></span>
+  	  	<span class="progress-text">0%</span>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.19/jquery-ui.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/load.js"></script>
+	<script type="text/javascript" src="js/slide.js"></script>
+	<script type="text/javascript" src="js/jquery.inview.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function ($) {
+  		setTimeout(function(){
+			$('.left-mv07').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+    			if(isInView){
+      				$(this).stop().addClass('mv07');
+    			}
+ 			});
+		},1000);
+	});
+
+	$(document).ready(function ($) {
+  		setTimeout(function(){
+			$('.right-mv07').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+    			if(isInView){
+      				$(this).stop().addClass('mv07');
+    			}
+ 			});
+		},1000);
+	});</script>
+
+
+</body>
+</html>
